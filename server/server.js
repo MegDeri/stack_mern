@@ -18,3 +18,7 @@ app.get('/api/posts', (req, res) => {
 app.listen(8000, function() {
     console.log("Function is listening on port:", 8000);
 });
+
+app.use(function (req, res, next) {
+    res.status(404).send("We are sorry, page not found");
+});
