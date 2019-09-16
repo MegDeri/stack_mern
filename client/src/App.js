@@ -12,11 +12,13 @@ class App extends React.Component {
         this.setState({ posts: res });
     });
   }
-  
+
   render () {
     return (
       <div>
-        Hello world!
+        <ul>
+          {this.state.posts.map(post => <li key={post.id}>post.title</li>)}
+        </ul>
       </div>
     );
   }
